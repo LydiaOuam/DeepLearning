@@ -1,3 +1,21 @@
-# Smart Diagnose
+# Classification d'images médicales avec un CNN-RNN hybride
+L'objectif de ce projet est de développer un modèle de deep learning hybride qui combine à la fois les capacités de reconnaissance de motifs des CNN avec la capacité de modélisation séquentielle des RNN.
 
-Smart Diagnose is a web app that predicts whether a chest x-ray consists of Pneumonia, in case of Pneumonia an image with localization on x-ray is also displayed.
+# Développement du projet
+Ce projet est développé sur un google collab.
+
+En ce qui concerne les données, on les a récupèrer de ce [site](https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia/data), puis on les a télécharger sur le google drive, histoire de ne pas avoir à les télecharger chaque fois qu'on veut traviller sur le notebook.
+
+# Bibliothèque et tech utilisé : (installation faites)
+Tesorflow,
+GPU,...
+
+# Collaborateurs : 
+Lydia Ouamrane 
+
+Kafia Airouche
+
+Boutaina Belghiti
+
+Kenza Oulmou
+
