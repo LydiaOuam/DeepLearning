@@ -1,0 +1,26 @@
+{% extends "diagnostic.html" %}
+{% block content %}
+{% if prediction %}
+    <section class="section section-dark">
+        <div class="container text-center">
+            <h2>Nous sommes désolés de vous informer que vous avez une pneumonie</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="{{ url_for('static', filename='xray/' + filename) }}" class="img-fluid" alt="Radiographie téléchargée">
+                </div>
+                <div class="col-md-6">
+                    <img src="{{ url_for('static', filename='xray/' + result_filename) }}" class="img-fluid" alt="Carte thermique de la radiographie">
+                </div>
+            </div>
+            <p class="mt-4"><strong>1) Image de la radiographie téléchargée   2) La carte thermique générée montrant la localisation de la pneumonie par une tache rouge foncé</strong></p>
+        </div>
+    </section>
+{% else %}
+    <section class="section section-dark">
+        <div class="container text-center">
+            <h1>Félicitations</h1>
+            <h4>Vous êtes exempt de pneumonie</h4>
+        </div>
+    </section>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagnostic Intelligent</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0a46a55419.js"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+        }
+        .form-control-file {
+            transition: all 0.3s;
+            border: 2px dashed #ddd;
+            border-radius: .25rem;
+        }
+        .form-control-file:hover {
+            border-color: #0056b3;
+        }
+        .btn-outline-light {
+            transition: all 0.3s;
+            border-color: #ffffff;
+        }
+        .btn-outline-light:hover {
+            background-color: #ffffff;
+            color: #000;
+        }
+        .section-dark {
+            padding: 40px 0;
+            background-color: #343a40;
+            color: #fff;
+            text-align: center;
+        }
+        .navbar-brand {
+            font-weight: bold;
+            font-size: 24px;
+        }
+        .ptext {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            text-align: center;
+            color: #fff;
+            font-size: 24px;
+            letter-spacing: 8px;
+            transform: translateY(-50%);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="{{url_for('index')}}"><i class="fas fa-user-md"></i> Diagnostic Intelligent</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Basculer la navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="{{url_for('index')}}">Accueil <span class="sr-only">(actuel)</span></a>
+                </li>
+				
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="pimg1">
+        <div class="ptext">
+            <!-- Texte optionnel peut aller ici -->
+        </div>
+    </div>
+
+    {% block content %}
+    <section class="section section-dark">
+        <h2>Téléchargez une image radiographique pour le diagnostic</h2>
+        <form id="upload-form" action="{{url_for('upload')}}" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <input type="file" class="form-control-file btn-light" name="file" accept="image/*">
+            </div>
+            <button type="submit" class="btn btn-outline-light">Diagnostiquer</button>
+        </form>
+    </section>
+    {% endblock %}
+
+    <div class="pimg2"></div>
+
+
+
+    <div class="pimg1"></div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
