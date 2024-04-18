@@ -10,6 +10,8 @@ En ce qui concerne les données, on les a récupèrer de ce [site](https://www.k
 Tesorflow,
 GPU,...
 
+# Lien vers [les données](https://drive.google.com/drive/folders/1jm7_3q_xzebi95vf5TkEEpfCVzHNx_ZK?usp=drive_link) et [le modèle](https://drive.google.com/file/d/1xIhqss_9eQxnbl2n_pCJHcMrSx0qZQ7U/view?usp=drive_link)
+
 # Collaborateurs : 
 Lydia Ouamrane 
 
